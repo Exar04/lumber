@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import { AuthProvider, useAuth } from './context/authContext.js';
 
 import './index.css'
 import { NoPage } from './pages/noPage.tsx';
@@ -9,21 +8,16 @@ import { HomePage } from './pages/homePage.tsx';
 import { MainLayout } from './layout/mainLayout.tsx';
 import { TablePage } from './pages/tablePage.tsx';
 import { GlobalProvider } from './context/globalContext.tsx';
-
-// function PrivateRoute() {
-//   const { token } = useAuth();
-//   console.log('PrivateRoute token:', token);
-//   return token ? <MainLayout /> : <Navigate to="/login" replace />;
-// }
+import { QueryPage } from './pages/queryPage.tsx';
 
 const router = createBrowserRouter([
-  // { path: "/login", element: <Login /> },
   {
     path: "/",
     element: <MainLayout />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/table/:tableName", element: <TablePage /> },
+      { path: "/query/:queryTitle", element: <QueryPage /> },
     ],
   },
   { path: '*', element: <NoPage /> },

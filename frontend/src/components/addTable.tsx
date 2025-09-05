@@ -1,7 +1,7 @@
 export function AddTable() {
     return (
         <div>
-            <h1>AddRecord</h1>
+            <h1>AddNewTable</h1>
         </div>
     )
 }

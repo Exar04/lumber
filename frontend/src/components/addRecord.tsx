@@ -59,7 +59,6 @@ export function AddRecord() {
     }
   }
 
-
   return (
     <Dialog
       open={isAddingRecord.open}
@@ -67,7 +66,7 @@ export function AddRecord() {
         setAddingRecord((prev) => ({ ...prev, open }))
       }
     >
-      <DialogContent className="bg-zinc-900/90 text-white sm:max-w-md">
+      <DialogContent className="bg-zinc-900/90 text-white sm:max-w-md border-zinc-800">
         <DialogHeader>
           <DialogTitle>
             Add New Record in '{isAddingRecord.tableName}' table

@@ -25,9 +25,10 @@ export function MainLayout() {
         <ResizableHandle className="w-2 bg-black rounded-lg transition-colors"/>
 
       </ResizablePanelGroup>
+
       { isAddingRecord ? <AddRecord /> : "" }
       { isAddingTable ? <AddTable /> : "" }
-      
+
     </div>
   )
 }

@@ -43,7 +43,8 @@ export function TablePage() {
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto relative h-full">
+      {dataKeys.length == 0 && <div className=" absolute w-full h-full flex justify-center items-center text-3xl text-zinc-700">No Records In {tableName} </div>}
       <Table>
         <TableHeader>
           <TableRow className="border-b border-zinc-700 hover:bg-zinc-900">
